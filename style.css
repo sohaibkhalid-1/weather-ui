@@ -1,22 +1,18 @@
-/* Resetting margin and padding */
-* {
-    box-sizing: border-box;
-}
-
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #001f3d; /* Dark Blue Background */
+    background-color: #095eb3;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Align items in a column */
+    flex-direction: column;
     height: 100vh;
     color: black;
-    text-align: center; /* Centering text */
+    text-align: center;
+    background-image: url(weather.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* Heading Styling */
 .heading {
     font-size: 30px;
     font-weight: bold;
@@ -25,53 +21,52 @@ body {
     color: white;
 }
 
-/* Main Forecast Container */
 .forecast-container {
-    width: 60%; /* Reduced width to make it more compact */
+    width: 60%;
     max-width: 1000px;
     background-color: #fff;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 }
 
-/* Styling for each Row */
 .forecast-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid #ddd;
-    border-radius: 8px; /* Rounded corners for each row */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    background-color: #001f3d;
+    margin-top: 10px;
+    color: white;
 }
 
-/* Hover Effect on Forecast Row */
 .forecast-row:hover {
-    background-color: #00bcd4; /* Light background color on hover */
+    background-color: #00bcd4;
     cursor: pointer;
 }
 
-/* Top and Bottom Row Styling */
 .top-row {
-    border-top-left-radius: 8px; /* Rounded corners for the top row */
-    border-top-right-radius: 8px; /* Rounded corners for the top row */
-    background-color: white; /* White background for top row */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #0366c8;
 }
 
 .bottom-row {
-    border-bottom-left-radius: 8px; /* Rounded corners for the bottom row */
-    border-bottom-right-radius: 8px; /* Rounded corners for the bottom row */
-    background-color: #2196f3; /* Blue background for the bottom row */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #2196f3;
 }
 
-/* Weather Icon Circle */
 .weather-icon {
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Circle shape */
+    border-radius: 50%;
     background-color: #ff9800;
     display: flex;
     justify-content: center;
@@ -80,12 +75,11 @@ body {
     position: relative;
     left: 140px;
 }
-/* Sun Icon Animation */
+
 .sun {
     animation: sun-size-change 1s infinite alternate;
 }
 
-/* Keyframe Animation for Sun */
 @keyframes sun-size-change {
     0% {
         transform: scale(1);
@@ -95,37 +89,35 @@ body {
     }
 }
 
-/* Cold Sun Color for temperatures < 20°C */
 .forecast-row.cold .weather-icon {
-    background-color: #add8e6; /* Light Cold Blue for sun icon */
+    background-color: #add8e6;
 }
 
-/* Temperature and Description Text */
-.temperature{
+.temperature {
     font-size: 16px;
     font-weight: bold;
     margin-left: 120px;
 }
+
 .description {
     font-size: 16px;
     font-weight: bold;
     margin-left: 10px;
 }
 
-/* Flex properties to make sure each item is spaced properly */
 .forecast-row span {
     flex: 1;
     text-align: center;
 }
 
-/* Spacing between elements */
 .forecast-row .weather-icon {
-    margin-left: 20px; /* Ensuring spacing between icon and text */
+    margin-left: 20px;
 }
-.weather-ico{
+
+.weather-ico {
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Circle shape */
+    border-radius: 50%;
     background-color: rgb(186, 179, 179);
     display: flex;
     justify-content: center;
