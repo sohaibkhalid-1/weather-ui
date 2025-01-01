@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice Problems Solution</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+  
+    <h1>JavaScript Practice Problems Solutions</h1>
+    <p>Mam Kindly check in console</p>
+
+<script>
+/* q1)Declare a variable userAge and assign it your age as a number. Log the message:
+"I am [userAge] years old."*/
+
+ let userAge = 25; // Replace with your age
+ console.log(`I am ${userAge} years old.`);
+
+/*Q2)Declare a string variable message with the value "Hello, welcome to JavaScript!". Answer the
+following:
+
+• Find and log the length of the string.
+• Find and log the index of the word "welcome".
+• Find and log the last index of the letter "o".
+• Extract and log the word "JavaScript" using the substr() method.*/
+        
+
+let message = "Hello, welcome to JavaScript!";       
+console.log("Length of the string:", message.length);       
+console.log("Index of 'welcome':", message.indexOf("welcome"));       
+console.log("Last index of 'o':", message.lastIndexOf("o"));
+console.log("Extracted word using substr():", message.substr(18, 10));
+
+/* Q3)Write a program that checks if a number stored in a variable num is:
+• Greater than 50 (log "The number is greater than 50.")
+• Equal to 50 (log "The number is equal to 50.")
+• Less than 50 (log "The number is less than 50.")*/
+let num = 45;
+if (num > 50) {
+    console.log("The number is greater than 50.");
+} else if (num === 50) {
+    console.log("The number is equal to 50.");
+} else {
+    console.log("The number is less than 50.");
+}
+
+/*Q4)Write a program to check if a string stored in a variable input contains the word "JavaScript". If
+it does:
+• Log "You are learning JavaScript!"
+• Otherwise, log "Try learning JavaScript!"*/
+let input = "Learning JavaScript is fun!";
+if (input.includes("JavaScript")) {
+    console.log("You are learning JavaScript!");
+} else {
+    console.log("Try learning JavaScript!");
+}
+
+/*Q5)Create a variable language with any string value. Write a program that checks:
+• If the value is "JavaScript", log "You are learning JavaScript!"
+• Otherwise, log "Try learning JavaScript!"*/
+let language = "JavaScript"; // Replace with different strings to test
+if (language === "JavaScript") {
+    console.log("You are learning JavaScript!");
+} else {
+    console.log("Try learning JavaScript!");
+}
+
+/*Q6)Write a function greetUser that takes a name as a parameter and returns a message:
+• Input: "Alice"
+• Output: "Hello, Alice! Welcome to JavaScript!"*/
+function greetUser(name) {
+  return `Hello, ${name}! Welcome to JavaScript!`;
+}
+console.log(greetUser("Alice"));
+
+/*Q7)Write a function calculateArea that takes the length and width of a rectangle as parameters and
+returns the area. For example:
+• Input: length = 5, width = 10
+• Output: "The area of the rectangle is 50."*/
+function calculateArea(length, width) {
+    return `The area of the rectangle is ${length * width}.`;
+}
+console.log(calculateArea(5, 10));
+
+/*Write a function checkEvenOdd that takes a number as input and logs whether the number is
+even or odd.*/
+function checkEvenOdd(number) {
+if (number % 2 === 0) {
+    console.log("The number is even.");
+} else {
+    console.log("The number is odd.");
+}
+}
+checkEvenOdd(4);
+function isEven(number) {
+if (number % 2 === 0) {
+    console.log("The number is even.");
+} else {
+    console.log("The number is odd.");
+}
+}
+isEven(7);
+
+       
+    </script>
+  <h1>Rock Paper Scissors</h1>
+  <div class="choices">
+      <button class="choice-button" onclick="playGame('rock')">Rock</button>
+      <button class="choice-button" onclick="playGame('paper')">Paper</button>
+      <button class="choice-button" onclick="playGame('scissors')">Scissors</button>
+  </div>
+  <div class="result" id="result"></div>
+  <script>
+function playGame(playerChoice) {
+  const choices = ["rock", "paper", "scissors"];
+  const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+  let resultMessage = `Player chose: ${playerChoice}<br>Computer chose: ${computerChoice}<br>`;
+
+  if (playerChoice === computerChoice) {
+      resultMessage += "It's a tie!";
+  } else if (
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
+  ) {
+      resultMessage += "You win!";
+  } else {
+      resultMessage += "You lose!";
+  }
+
+  document.getElementById("result").innerHTML = resultMessage;
+    }
+</script>
+</body>
+</html>
